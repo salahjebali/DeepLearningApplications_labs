@@ -174,35 +174,39 @@ The presence of very sparse gradients further exacerbates the vanishing gradient
 
 ### 2.1.1.1: ResNet
 
-**Train Accuracy**
-![TA]()
-**Train Loss**
-![TL]()
-**Val Accuracy** 
-![VA]()
-**Val Loss**
-![VL]()
+The observed uniform distribution of gradients around zero in ResNet is a highly favorable characteristic that indicates the network's resilience against both vanishing and exploding gradient problems. The fact that the gradients are not sparse implies that all connections in the network are effectively updated during backpropagation, ensuring that information flows consistently through the layers. This uniformity is crucial for successful training, as it allows the model to learn meaningful representations across all depths.
+
+The absence of vanishing gradients is a significant advantage in ResNet. When gradients remain consistently non-zero and do not approach extremely small values, the network can efficiently backpropagate errors through the layers. This property enables the model to learn from the data effectively and efficiently, even in very deep architectures.
+
+Similarly, the lack of exploding gradients ensures that the optimization process remains stable. When gradients are not prone to extreme values, the risk of the optimization process becoming unstable and leading to drastic parameter updates is mitigated. A stable optimization process helps in achieving faster convergence and better generalization.
+
+The uniform distribution of gradients around zero in ResNet, along with the absence of sparsity and exploding gradients, is a testament to the effectiveness of the residual connections in the architecture. These skip connections allow for the smooth propagation of gradients, fostering consistent learning throughout the network. As a result, ResNet can handle deeper architectures without suffering from accuracy degradation, making it a superior choice for various deep learning tasks.
+
+
+![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/gradients/gradients_layer2.0.conv1.weight.png)
+![TL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/gradients/gradients_layer1.2.conv1.weight.png)
+![VA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/gradients/gradients_layer2.2.conv2.weight.png)
+![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/gradients/gradients_layer3.3.conv1.weight.png)
 
 ## 2.1.2: Parameter Analysis
 
 ### 2.1.2.0: VGG 
+The observed sparsity of parameters in VGG is an interesting finding. Sparse parameters suggest that certain connections in the network are not effectively contributing to the learning process, which might be limiting the model's capacity to capture complex patterns in the data. Sparse connections can lead to information loss and hinder the model's ability to represent fine-grained details in the input. Additionally, the noise present during convergence in VGG can be indicative of instability in the optimization process. This instability might lead to fluctuations in parameter values, making it difficult for the model to converge smoothly to an optimal solution.
 
-**Train Accuracy**
-![TA]()
-**Train Loss**
-![TL]()
-**Val Accuracy** 
-![VA]()
-**Val Loss**
-![VL]()
+
+![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/parameters/parameters_features.10.bias.png)
+
+![TL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/parameters/parameters_features.11.weight_features.11.weight.png)
+
+![VA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/parameters/parameters_features.21.bias.png)
+
+![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/parameters/parameters_features.37.weight.png)
 
 ### 2.1.2.1: ResNet
+In contrast, ResNet showcases remarkable stability in both its parameters and gradients, which is a positive sign for deep neural networks. The stability of parameters in ResNet indicates consistent learning from the data and convergence towards an optimal solution. The absence of significant fluctuations or sparsity in parameters signifies that ResNet is utilizing all connections effectively to represent complex patterns. The improved stability in ResNet can be attributed to its unique architecture with residual connections, which mitigate the vanishing gradient problem and encourage more straightforward optimization. The stability observed in ResNet is a significant advantage, as it contributes to its ability to perform well even with very deep networks, avoiding accuracy degradation and enhancing its generalization capabilities.
 
-**Train Accuracy**
-![TA]()
-**Train Loss**
-![TL]()
-**Val Accuracy** 
-![VA]()
-**Val Loss**
-![VL]()
+
+![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/parameters/parameters_layer3.4.conv2.weight.png)
+![TL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/parameters/parameters_layer3.2.conv1.weight.png)
+![VA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/parameters/parameters_layer3.0.bn1.weight.png)
+![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/resnet/parameters/parameters_layer2.0.residual.conv.weight.png)
