@@ -5,6 +5,22 @@ The  `notebook `, for reproducibility, can be found [here](https://colab.researc
 Beside completing the tasks and give an analysis of the results, I wanted to focus on the code design as well. For this reason, you will find in the notebook, a 1.0 section where you can find all the code that can be reuitlized between each experiments. 
 This decision was inspired by the best practice of Object Oriendted Programming (OOP)
 
+# Scripts
+
+In the [lab1/scripts](https://github.com/salahjebali/DeepLearningApplications_labs/tree/main/lab1/scripts) folder. you can find several classes and methods utilized by all the model architectures for the Deep Learning Applications Labs - Lab 1.
+
+The code inside the scripts has responsability of dealing with the following tasks
+
+- **Model Classes**: Contains classes representing different model architectures.
+- **Training**: Includes methods for training the models.
+- **Evaluate**: Provides functions for evaluating model performance.
+- **Weights Initialization**: Contains functions for initializing model weights.
+- **Gradient Flow Analysis**: Includes utilities for analyzing gradient flow in models.
+- **Image Display**: Contains methods to display images and visualizations.
+
+Feel free to explore the .py file for understanding how it works.
+
+
 # Exercise 1.1: A baseline MLP
 
 Implement a simple Multilayer Perceptron to classify the 10 digits of MNIST (e.g. two narrow layers).Train this model to convergence, monitoring (at least) the loss and accuracy on the training and validation sets for every epoch.
