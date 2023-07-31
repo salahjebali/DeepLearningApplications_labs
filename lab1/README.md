@@ -20,4 +20,4 @@ The convergence of the training and validation curves suggests that the model is
 
 The observation that gradients appear to be stable and well-behaved during the training of your MLP for image classification on MNIST is a positive sign of effective learning and optimization.
 
-![Gradient Flow] (https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.1%20MLP/gradient_flow.png)
+![Gradient Flow](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.1%20MLP/gradient_flow.png)
