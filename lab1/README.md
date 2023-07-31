@@ -103,3 +103,106 @@ To conduct these analysis I used [Weight and Biases](https://wandb.ai/site) for 
 ![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/vgg_val_loss.png)
 
 
+# Exercise 2.1: Explain why Residual Connections are so effective
+
+Use your two models (with and without residual connections) you developed above to study and quantify why the residual versions of the networks learn more effectively.
+
+Hint: A good starting point might be looking at the gradient magnitudes passing through the networks during backpropagation.
+
+## 2.1.0: Summary of the results
+
+**1) Research Question**
+
+   Why does ResNet34 outperform VGG16 in terms of accuracy? How do the gradients and parameters behave in both architectures?
+
+**2) Obtained Results**
+
+
+1.   **Gradients in ResNet**:
+
+ The gradients in ResNet34 are stable and consistent at different layers, even in the deep layers. They do not suffer from vanishing gradients, which is crucial for successful training in deep networks.
+
+2.   **Gradients in VGG**:
+
+ The gradients in VGG16, especially in deeper layers, tend to be less stable and can sometimes suffer from the vanishing gradient problem. This instability may hinder the learning process and result in slower convergence.
+
+3.  **Parameters in ResNet**:
+
+ The parameters in ResNet34 are relatively stable throughout different layers. The stability of parameters suggests that the model is learning effectively, and there are no significant issues with the optimization process.
+
+4. **Parameters in VGG**:
+
+ In VGG16, the parameters show more sparsity, and in certain layers, they tend to diverge. The sparsity indicates that certain connections may not be contributing effectively to the model's learning. The divergence in parameters suggests instability in optimization and may hinder the model's convergence.
+
+**3) Interpretation**
+
+1.  **Stable Gradients in ResNet**:
+
+ The stable gradients in ResNet34 enable efficient backpropagation of errors through the network, allowing the model to effectively learn from the data, even in deeper layers. This stability is a key factor in the success of ResNet.
+
+2. **Vanishing Gradients in VGG**:
+
+ The less stable gradients in VGG16, especially in deeper layers, indicate a higher likelihood of vanishing gradients. This phenomenon makes it challenging for the model to learn meaningful representations in the deeper layers and leads to slower convergence.
+
+3. **Parameter Stability in ResNet**:
+
+ The stable parameters in ResNet34 suggest that the model is consistently learning from the data and converging towards the optimal solution. This stability is crucial for the model to make meaningful adjustments during training.
+
+4. **Parameter Sparsity and Divergence in VGG**:
+
+  The parameter sparsity in VGG16 implies that certain connections may not be effectively contributing to the learning process, limiting the model's capacity to capture complex patterns. The divergence in parameters indicates instability in the optimization process, which can hinder the model's ability to converge and generalize well.
+
+
+  In summary, the superior performance of ResNet34 over VGG16 can be attributed to the stability of gradients and parameters in ResNet, allowing it to effectively handle deeper architectures without suffering from accuracy degradation. The vanishing gradients and parameter instability in VGG16 impede its ability to learn efficiently in deeper layers, leading to decreased accuracy.
+
+
+## 2.1.1: Gradient Analysis
+
+### 2.1.1.0: VGG
+The observation of gradients approaching zero and being very sparse in VGG is concerning and points to the presence of the vanishing gradient problem. When gradients become too small, they effectively diminish as they propagate backward through the layers during training. As a result, layers towards the beginning of the network may not receive sufficiently informative updates, hindering their ability to learn and adapt to the data. Consequently, this vanishing gradient issue can severely limit the capacity of VGG to capture complex features and may lead to decreased accuracy, particularly in deeper layers.
+
+The presence of very sparse gradients further exacerbates the vanishing gradient problem in VGG. Sparse gradients suggest that certain connections within the network are rarely updated during training. This sparsity can prevent crucial information from being effectively propagated throughout the network, causing information loss and impeding the learning process. Sparse gradients can also result in longer convergence times, as the model may require more iterations to adapt its parameters properly.
+
+
+![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/gradients/gradients_features.49.weight.png)
+
+![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/gradients/gradients_classifier.3.weight.png)
+
+![TL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/gradients/gradients_features.8.weight.png)
+
+![VA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/2.1%20ResNet_can_go_deeper/vgg/gradients/gradients_features.8.bias.png)
+
+### 2.1.1.1: ResNet
+
+**Train Accuracy**
+![TA]()
+**Train Loss**
+![TL]()
+**Val Accuracy** 
+![VA]()
+**Val Loss**
+![VL]()
+
+## 2.1.2: Parameter Analysis
+
+### 2.1.2.0: VGG 
+
+**Train Accuracy**
+![TA]()
+**Train Loss**
+![TL]()
+**Val Accuracy** 
+![VA]()
+**Val Loss**
+![VL]()
+
+### 2.1.2.1: ResNet
+
+**Train Accuracy**
+![TA]()
+**Train Loss**
+![TL]()
+**Val Accuracy** 
+![VA]()
+**Val Loss**
+![VL]()
