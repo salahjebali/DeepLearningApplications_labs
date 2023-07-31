@@ -21,3 +21,28 @@ The convergence of the training and validation curves suggests that the model is
 The observation that gradients appear to be stable and well-behaved during the training of your MLP for image classification on MNIST is a positive sign of effective learning and optimization.
 
 ![Gradient Flow](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.1%20MLP/gradient_flow.png)
+
+# Exercise 1.2: Rinse and Repeat
+
+Repeat the verification you did above, but with **Convolutional** Neural Networks. If you were careful about abstracting your model and training code, this should be a simple exercise. Show that **deeper** CNNs *without* residual connections do not always work better and **even deeper** ones *with* residual connections.
+
+To conduct these analysis I used [Weight and Biases](https://wandb.ai/site) for tracking the gradients, the parameters and the convergence.
+
+## 1.2.1: Compare all the models 
+
+1.   **Research Question:**
+    How do different models, including both ResNet and VGG architectures, perform in terms of accuracy on the validation set?
+2. **Obtained Results:**
+    After conducting several runs and plotting the validation and training curves, we observed the following performance ranking (from highest to lowest validation accuracy):
+
+
+    1.   ResNet34
+    2.   ResNet18
+    3.   VGG19
+    4.   VGG16
+    5.   VGG24
+
+3. **Interpretation:**
+    From the results of Experiment 1, it is evident that the ResNet models outperform the VGG models consistently across all depths. This suggests that the residual connections in ResNet are significantly aiding in the learning process and preventing accuracy degradation as the network gets deeper. Additionally, we notice that VGG24 performs the worst among all models, indicating that increasing the depth of the VGG network has led to accuracy degradation.
+
+
