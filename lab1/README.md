@@ -46,3 +46,44 @@ To conduct these analysis I used [Weight and Biases](https://wandb.ai/site) for 
     From the results of Experiment 1, it is evident that the ResNet models outperform the VGG models consistently across all depths. This suggests that the residual connections in ResNet are significantly aiding in the learning process and preventing accuracy degradation as the network gets deeper. Additionally, we notice that VGG24 performs the worst among all models, indicating that increasing the depth of the VGG network has led to accuracy degradation.
 
 
+**Train Accuracy**
+![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/all_train_acc.png)
+**Train Loss**
+![TL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/all_train_loss.png)
+**Val Accuracy** 
+![VA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/all_val_accuracy.png)
+**Val Loss**
+![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/all_val_loss.png)
+
+## 1.2.2: Compare VGGs architectures
+
+1.   **Research Question:**
+    How does the accuracy of VGG models change as we increase the depth (VGG16 vs. VGG19 vs. VGG24)?
+2. **Obtained Results:**
+    Upon analyzing the validation and training curves of VGG16, VGG19, and VGG24, we observed the following performance ranking:
+
+    1.   VGG16
+    2.   VGG19
+    3.   VGG24
+
+3. **Interpretation:**
+    Experiment 3 indicates that, unlike ResNet, increasing the depth of the VGG models negatively impacts accuracy. The highest accuracy was achieved by the shallower VGG16 model, followed by VGG19 and VGG24. This degradation in performance as the model deepens is likely due to the vanishing gradient problem, which is more pronounced in VGG architectures, limiting the model's capacity to learn effectively from deeper layers.
+
+   
+**Train Accuracy**
+![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/vgg_train_acc.png)
+**Train Loss**
+![TL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/vgg_train_loss.png)
+**Val Accuracy** 
+![VA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/vgg_val_acc.png)
+**Val Loss**
+![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/vgg_val_loss.png)
+
+**Train Accuracy**
+![TA]()
+**Train Loss**
+![TL]()
+**Val Accuracy** 
+![VA]()
+**Val Loss**
+![VL]()
