@@ -1,5 +1,7 @@
 This is the analysis of the experiments conducted. 
 
+The  `notebook `, for reproducibility, can be found [here](https://colab.research.google.com/drive/1oN8z6RJ2rgalP2PHEA3p_NVT7pv9V4mv?usp=sharing) as well
+
 Beside completing the tasks and give an analysis of the results, I wanted to focus on the code design as well. For this reason, you will find in the notebook, a 1.0 section where you can find all the code that can be reuitlized between each experiments. 
 This decision was inspired by the best practice of Object Oriendted Programming (OOP)
 
