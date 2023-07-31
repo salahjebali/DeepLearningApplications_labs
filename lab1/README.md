@@ -14,5 +14,6 @@ Important: Given the many runs you will need to do, and the need to compare perf
 
 The convergence of the training and validation curves suggests that the model is effectively learning the underlying patterns present in the MNIST images. The similar trends between the training and validation curves indicate that the model is not suffering from overfitting.
 
-![alt text](lab1/results/1.1 MLP/val_train_plot.png)
+[alt text] (lab1/results/1.1 MLP/val_train_plot.png)
+
 ## 1.1.2: Gradient Flow Study 
