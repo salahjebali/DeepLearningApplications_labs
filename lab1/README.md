@@ -7,9 +7,9 @@ This decision was inspired by the best practice of Object Oriendted Programming 
 
 # Scripts
 
-In the [lab1/scripts](https://github.com/salahjebali/DeepLearningApplications_labs/tree/main/lab1/scripts) folder. you can find several classes and methods utilized by all the model architectures for the Deep Learning Applications Labs - Lab 1.
+In the [lab1/scripts](https://github.com/salahjebali/DeepLearningApplications_labs/tree/main/lab1/scripts) folder, you can find a script that contains several classes and methods utilized by all the model architectures for the Deep Learning Applications Labs - Lab 1.
 
-The code inside the scripts has responsability of dealing with the following tasks
+The code inside the script has responsability of dealing with the following tasks
 
 - **Model Classes**: Contains classes representing different model architectures.
 - **Training**: Includes methods for training the models.
