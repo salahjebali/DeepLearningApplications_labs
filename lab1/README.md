@@ -57,6 +57,18 @@ To conduct these analysis I used [Weight and Biases](https://wandb.ai/site) for 
 
 ## 1.2.2: Compare ResNets architectures
 
+1.   **Research Question:**
+    Does increasing the depth of the ResNet models (ResNet18 vs. ResNet34) have any significant impact on the accuracy?
+2. **Obtained Results:**
+    After comparing the validation and training curves of ResNet18 and ResNet34, we found that both models achieved high validation revealsaccuracy. The performance ranking is as follows:
+
+
+    1.   ResNet34
+    2.   ResNet18
+
+3. **Interpretation:**
+    Experiment 3 reveals that increasing the depth from ResNet18 to ResNet34 has indeed improved the model's performance. This finding aligns with the inherent advantage of residual connections in ResNet, allowing it to leverage deeper architectures effectively without suffering from accuracy degradation. The performance gain observed in ResNet34 demonstrates the importance of adding more layers to enhance the model's capacity to learn complex patterns.
+
 **Train Accuracy**
 ![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/resnet_train_acc.png)
 **Train Loss**
