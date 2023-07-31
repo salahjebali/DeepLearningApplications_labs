@@ -55,7 +55,18 @@ To conduct these analysis I used [Weight and Biases](https://wandb.ai/site) for 
 **Val Loss**
 ![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/all_val_loss.png)
 
-## 1.2.2: Compare VGGs architectures
+## 1.2.2: Compare ResNets architectures
+
+**Train Accuracy**
+![TA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/resnet_train_acc.png)
+**Train Loss**
+![TL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/resnet_train_loss.png)
+**Val Accuracy** 
+![VA](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/resnet_val_acc.png)
+**Val Loss**
+![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/resnet_val_loss.png)
+
+## 1.2.3: Compare VGGs architectures
 
 1.   **Research Question:**
     How does the accuracy of VGG models change as we increase the depth (VGG16 vs. VGG19 vs. VGG24)?
@@ -79,11 +90,4 @@ To conduct these analysis I used [Weight and Biases](https://wandb.ai/site) for 
 **Val Loss**
 ![VL](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.2%20ResNet_vs_VGG/wandb/vgg_val_loss.png)
 
-**Train Accuracy**
-![TA]()
-**Train Loss**
-![TL]()
-**Val Accuracy** 
-![VA]()
-**Val Loss**
-![VL]()
+
