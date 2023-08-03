@@ -1,0 +1,113 @@
+1) Dante Tokenizer 
+
+prompt: "In the middle of the journey of our life, I found myself in a"
+Input Text Length:  61
+Encoded Sequence Length:  15
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Temperature = 0.3 & do_sample = False
+
+generated: 
+
+ In the middle of the journey of our life, I found myself in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place
+
+#Temperature = 0.6 & do_sample = False
+
+generated: 
+
+
+ In the middle of the journey of our life, I found myself in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place
+
+
+#Temperature = 0.9 & do_sample = False
+
+generated: 
+
+ In the middle of the journey of our life, I found myself in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place. I was in a strange place
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Temperature = 0.3 & do_sample = True
+
+generated: 
+
+ In the middle of the journey of our life, I found myself in a small village in the middle of nowhere. We were all in the same boat. I was in the middle of a river, and I was in the middle of a river. I was in the middle of a river, and I was in the middle of a river. I was in the middle of a river, and I was in the middle of a river. I was in the middle of a river, and I was in the middle of a river. I was in the middle of a river, and I was in the middle of a river. I was in the middle of a river, and I was in the middle of a river. I was in the middle
+
+#Temperature = 0.6 & do_sample = True
+
+generated: 
+
+ In the middle of the journey of our life, I found myself in a strange place. I was in a strange place, and I felt that I was alone in the world. I was alone in my own mind. I was alone in my own mind. I was alone in my own mind. I felt that I was alone in the world. I felt that I was alone in my own mind. I was alone in my own mind. I felt that I was alone in my own mind. I felt that I was alone in my own mind. I was alone in my own mind. I felt that I was alone in my own mind. I felt that I was alone in my own mind. I felt that I was alone in my own
+
+#Temperature = 0.9 & do_sample = True
+
+generated: 
+
+ In the middle of the journey of our life, I found myself in a room of people whose names had not been changed. I found myself looking at them with a deep, dark satisfaction. It would be like watching a young child sit at attention on a large table with his or her mother. There will be a pause in the thought as to why I would listen. I had been very anxious about becoming a writer, but I felt more satisfied with my life because it was now complete. We had taken a long break from our lives, and we had begun toDsl the journey together. There was no place for me to be alone. I had left home and found myself in a world of strangers or strange people who had not yet arrived here
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) The Weeknd Tokenizer 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+prompt: "I was born in a city Where the winter nights don't ever sleep So this life's always with me The ice inside my veins will never bleed My, ooh My, ooh Uh, every time you try to fix me I know you'll never find that missing piece When you cry and say you miss me I'll lie and tell you that I'll never leave But I sacrificed (sacrificed) Your love for more of the night (of the night) I try to put up a fight (up a fight) Can't tie me down (down) I don't wanna sacrifice For your love, I try I don't wanna sacrifice But I love my time My, ooh My, ooh"
+
+Input Text Length:  545
+Encoded Sequence Length:  144
+
+
+#Temperature = 0.3 & do_sample = True
+
+generated: 
+
+ I was born in a city Where the winter nights don't ever sleep So this life's always with me The ice inside my veins will never bleed My, ooh My, ooh Uh, every time you try to fix me I know you'll never find that missing piece When you cry and say you miss me I'll lie and tell you that I'll never leave But I sacrificed (sacrificed) Your love for more of the night (of the night) I try to put up a fight (up a fight) Can't tie me down (down) I don't wanna sacrifice For your love, I try I don't wanna sacrifice But I love my time My, ooh My, ooh Uh, every time you try
+
+#Temperature = 0.6 & do_sample = True
+
+generated: 
+
+ I was born in a city Where the winter nights don't ever sleep So this life's always with me The ice inside my veins will never bleed My, ooh My, ooh Uh, every time you try to fix me I know you'll never find that missing piece When you cry and say you miss me I'll lie and tell you that I'll never leave But I sacrificed (sacrificed) Your love for more of the night (of the night) I try to put up a fight (up a fight) Can't tie me down (down) I don't wanna sacrifice For your love, I try I don't wanna sacrifice But I love my time My, ooh My, ooh My, ooh Uh,
+
+#Temperature = 0.9 & do_sample = True
+
+generated: 
+
+ I was born in a city Where the winter nights don't ever sleep So this life's always with me The ice inside my veins will never bleed My, ooh My, ooh Uh, every time you try to fix me I know you'll never find that missing piece When you cry and say you miss me I'll lie and tell you that I'll never leave But I sacrificed (sacrificed) Your love for more of the night (of the night) I try to put up a fight (up a fight) Can't tie me down (down) I don't wanna sacrifice For your love, I try I don't wanna sacrifice But I love my time My, ooh My, ooh Uh, every time you try
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3) Martin Luther King Tokenizer 
+
+prompt: "I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together"
+
+Input Text Length:  287
+Encoded Sequence Length:  57
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Temperature = 0.3 & do_sample = True
+
+generated: 
+
+ I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together with the glory of the Lord.
+
+And I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together with the glory of the Lord.
+
+And I have a dream that one day every valley shall be engulfed, every hill shall
+
+
+#Temperature = 0.6 & do_sample = True
+
+generated: 
+
+ I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together with his glory.
+And he who believes in the Lord shall be exalted, and all flesh shall see the Lord.
+And the Lord has given to his people, in the name of the Lord Jesus Christ, the only begotten Son of God, the only begotten of the Father, and he who believes in the Lord shall be exalted, and all flesh shall see the Lord.
+
+And he who believes in the Lord shall be exalted,
+
+#Temperature = 0.9 & do_sample = True
+
+generated:  
+
+ I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together with the glory of God; for I know ye not that ye have heard these words of mine Father in Heaven; and the Lord your God shall say unto you, Go up and be a man, and make him a man; and he that hath it in his heart shall he cast out his hand, and he that hath it out thereof shall set it ablaze; and if anyone that hath it in his heart cast out the hand of the Lord shall cast it
