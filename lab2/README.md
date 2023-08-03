@@ -147,6 +147,29 @@ First, I will display the report for both the values of max_tokens, then I will 
 | Weighted Avg | 0.80    | 0.62    | 0.59     | 16      |
 
 
+Based on the provided confusion matrices and classification reports for the three classifiers (MLP, Logistic Regression,SVM and Random Forest) , we can observe the following:
+
+1. **MLP Classifier**:
+
+The confusion matrix shows that the model predicted all instances as class 0, resulting in an accuracy of 44%.
+The classification report reveals that the model has high precision for class 0 (correctly predicted all instances of class 0) but has low recall and f1-score for class 1 (failed to predict any instances of class 1).
+Overall, the MLP classifier's performance is poor, as it fails to correctly predict instances of class 1.
+
+2. **Logistic Regression Classifier**:
+
+The confusion matrix shows that the model predicted 7 instances correctly for class 0 and 2 instances correctly for class 1, resulting in an accuracy of 56%.
+The classification report indicates that the model has good precision, recall, and f1-score for class 0, but lower values for class 1.
+Similar to the MLP classifier, the logistic regression classifier's performance is suboptimal, especially for class 1.
+
+3. **SVM Classifier**:
+
+The confusion matrix is the same as the logistic regression classifier, predicting 7 instances correctly for class 0 and 2 instances correctly for class 1, also resulting in an accuracy of 56%.
+The classification report shows similar performance for class 0 as the logistic regression classifier, but again, the performance for class 1 is not satisfactory.
+
+4. **Random Forest**
+The Random Forest classifier performs slightly better than the other two models, achieving an accuracy of 62% on the test set. It has a higher recall for class '1' (33%) compared to the other classifiers, indicating a better ability to identify negative reviews. However, the Random Forest model still faces difficulties in classifying class '1' instances, as evident from its lower F1-score of 0.50 for this class.
+
+Overall, we observe that all three classifiers exhibit some degree of overfitting, as evidenced by their relatively high accuracy on the training set compared to the test set. The models struggle to generalize well to unseen data, particularly when dealing with negative sentiment instances. These challenges may stem from the limited size of the IMDb dataset, which hinders the classifiers' ability to learn more robust patterns and generalize effectively.
 
 ### 3.1.1: Max tokens = 256
 
@@ -186,7 +209,62 @@ First, I will display the report for both the values of max_tokens, then I will 
 | Macro Avg  | 0.22      | 0.50    | 0.30     | 16      |
 | Weighted Avg | 0.19    | 0.44    | 0.27     | 16      |
 
+Based on the provided confusion matrices and classification reports for the three classifiers (MLP, Logistic Regression,SVM and Random Forest) , we can observe the following:
 
+
+1. **MLP Classifier**: 
+Overall, after changing the max_length hyperparameter to 256, the performance of the classifiers has improved compared to when max_length was set to 128. The MLP classifier shows the most significant improvement, with an accuracy of 69%. However, it is still not able to predict class 0 instances effectively, resulting in lower recall and F1-score for class 0.
+
+2. **Logistic Regression Classifier**:
+The logistic regression shows accuracy of 50%. It still struggle to correctly predict instances of class 1, with low recall and F1-score for this class.
+
+3. **SVM Classifier**:
+SVM classifiers show similar performance to the LRC, both achieving an accuracy of 44%. It still struggles to correctly predict instances of class 1, with low recall and F1-score for this class.
+
+5. **Random Forest**
+The Random Forest classifier performs slightly better than the other two models, achieving an accuracy of 62% on the test set. It has a higher recall for class 1 (33%) compared to the other classifiers, indicating a better ability to identify negative reviews. However, the Random Forest model still faces difficulties in classifying class 1 instances, as evident from its lower F1-score of 0.50 for this class.
+
+## 3.2: Overall Analysis
+
+The performance of the classifiers before and after changing the `max_length` hyperparameter shows interesting trends:
+
+### Before Changing `max_length` to 256:
+
+1. **MLP Classifier**:
+
+   The MLP classifier had the lowest accuracy of 44%, failing to predict any instances of class 1. This poor performance could be attributed to the limited context provided to the model due to the shorter maximum length of tokens.
+
+2. **Logistic Regression Classifier**:
+
+   The logistic regression classifier achieved an accuracy of 56%. However, it struggled to correctly predict instances of class 1, resulting in low recall and F1-score for this class.
+
+3. **SVM Classifier**:
+
+   The SVM classifier's performance was similar to the logistic regression classifier, also achieving an accuracy of 56%. However, like the logistic regression model, it faced challenges in correctly classifying instances of class 1.
+
+4. **Random Forest Classifier**:
+
+   The Random Forest classifier performed slightly better than the other models, with an accuracy of 62%. However, it also faced difficulties in classifying instances of class 1, as indicated by its lower F1-score for this class.
+
+### After Changing `max_length` to 256:
+
+1. **MLP Classifier**:
+
+   The most significant improvement was seen in the MLP classifier, which achieved an accuracy of 69%. The model's ability to predict instances of class 1 improved, resulting in higher recall and F1-score for this class. This enhancement can be attributed to the increased context provided to the model with the longer `max_length`.
+
+2. **Logistic Regression Classifier**:
+
+   Surprisingly, the logistic regression classifier's performance decreased after increasing the `max_length`, with an accuracy of 50%. The model continued to struggle with predicting instances of class 1, leading to lower recall and F1-scores for this class.
+
+3. **SVM Classifier**:
+
+   Similar to the logistic regression model, the SVM classifier's performance also decreased after increasing the `max_length`, with an accuracy of 44%. It continued to face challenges in correctly classifying instances of class 1.
+
+4. **Random Forest Classifier**:
+
+   The Random Forest classifier's performance remained relatively stable with an accuracy of 62%. Similar to the other models, it faced difficulties in classifying instances of class 1, as evidenced by its lower F1-score for this class.
+
+Overall, the analysis highlights the importance of hyperparameter tuning, specifically the `max_length`, in obtaining better results from language models like DistilBERT. Increasing the `max_length` allowed the MLP classifier to capture more context, leading to improved accuracy. However, the other classifiers did not benefit from the increased context and faced challenges in classifying instances of class 1. This observation emphasizes the need for thorough experimentation and tuning when using language models and highlights the potential of MLP models for tasks involving longer texts.
 
 
 
