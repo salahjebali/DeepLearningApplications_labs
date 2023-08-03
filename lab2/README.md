@@ -104,6 +104,47 @@ The following table contains values about the length of *prompt*, *tokens* and a
 | "I was born in a city Where the winter nights don't ever sleep So this life's always with me The ice inside my veins will never bleed My, ooh My, ooh Uh, every time you try to fix me I know you'll never find that missing piece When you cry and say you miss me I'll lie and tell you that I'll never leave But I sacrificed (sacrificed) Your love for more of the night (of the night) I try to put up a fight (up a fight) Can't tie me down (down) I don't wanna sacrifice For your love, I try I don't wanna sacrifice But I love my time My, ooh My, ooh"     | 545            | 144           | I was born in a city Where the winter nights don't ever sleep So this life's always with me The ice inside my veins will never bleed My, ooh My, ooh Uh, every time you try to fix me I know you'll never find that missing piece When you cry and say you miss me I'll lie and tell you that I'll never leave But I sacrificed (sacrificed) Your love for more of the night (of the night) I try to put up a fight (up a fight) Can't tie me down (down) I don't wanna sacrifice For your love, I try I don't wanna sacrifice But I love my time My, ooh My, ooh My, ooh Uh,|
 | "I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together"       | 287            | 57           | I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together with his glory.|
 
+All the results can be found inside the file **gpt2_textgen_results.txt** in the folder `results`
+
+## 2.1.1: Result Analysis
+
+For each author of the prompt we used a different tokenizer but the same model, now I will display the table containing the evalutation that can be:
+
+. Insufficient
+. Sufficient
+. Good
+. Excellent
+
+1. **Dante Alighieri**
+
+   | Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
+|:------:|:--------------:|:--------------------------:|:-------------:|
+|  0.3  |     Good       |        Insufficient          |    Sufficient  |
+|  0.6  |   Good    |        Insufficient          |   Sufficient        |
+|  0.9   |   Good |        Insufficient               |  Good  |
+
+Overall, the grammar was good for every prompt, but the coherence with the author was insufficient: I could not understand that the author was Dante Alighieri by just reading the generated text. I was suprised by the *fantasy* with high temperature and the semantic level. 
+
+2. **The Weeknd**
+
+   | Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
+|:------:|:--------------:|:--------------------------:|:-------------:|
+|  0.3  |     Good       |        Sufficient          |    Sufficient  |
+|  0.6  |   Good    |        Sufficient          |   Sufficient        |
+|  0.9   |   Good |        Sufficient               |  Good  |
+
+Overall, the grammar was good for every prompt, and the coherence with the author was Sufficient, since the lyrics in question are really easy. In this case it seems that the temperature did not change too much, maybe because of the semplicity of the text.
+
+
+2. **Martin Luther King**
+
+   | Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
+|:------:|:--------------:|:--------------------------:|:-------------:|
+|  0.3  |     Good       |        Sufficient          |    Sufficient  |
+|  0.6  |   Good    |        Good         |   Good       |
+|  0.9   |   Good |        Good            |  Excellent  |
+
+This one really surprised me because I could really feel the difference between the text produced with different temperature. With low temperature, the text was just a repetition, while increasing the temperature the model generated new stuff, that could be easily attributed to the author. Moreover, overall every text was correct under the grammar syntax pov and the semantics was good.
 
 # Exercise 3.1: Reusing Pre-trained LLMs for Training a Text Classifier
 
