@@ -2,7 +2,7 @@ This is the analysis of the experiments conducted.
 
 The  `notebook `, for reproducibility, can be found [here](https://colab.research.google.com/drive/169A6w8POVtu0sX4nuURDyp5-mFT_zJZL?authuser=1#scrollTo=vB_KmNNENCWA) as well.
 
-# Exercise 1: A baseline MLP
+# Exercise 1: GPT applied to Dante Alighieri's Divina Commedia
 
 In this first exercise you will train a small autoregressive GPT model for character generation (the one used by Karpathy in his video) to generate text in the style of Dante Aligheri. Use this [file](https://archive.org/stream/ladivinacommedia00997gut/1ddcd09.txt), which contains the entire text of Dante's Inferno (note: you will have to delete some introductory text at the top of the file before training). Train the model for a few epochs, monitor the loss, and generate some text at the end of training. Qualitatively evaluate the results.
 
@@ -33,7 +33,7 @@ In the following table you can find a summary
 |  250   |   Sufficient   |        Sufficient          |        Good      |   Insufficient|
 
 In general I would say that the performances are quite low. It seems to have a **sufficient** coherence with Dante's style, because at first it reminds of some of his poems. But when you start reading properly, there are some sentences that seems grammarly correct but without any semantic sense. 
-Moreover, La Divina Commedia is written in triples, but sometimes it produced verses in pairs or four, that is not coherent with the metric. Having said that, I decide to put Insufficient wherever I found in the outcome something not in triplets. 
+Moreover, La Divina Commedia is written in triples, but sometimes it produced verses in pairs or four, that is not coherent with the metric. Having said that, I decide to put **insufficient** wherever I found in the outcome something not in triplets. 
 
 In general, It seems that the length of the output doesn't influence a lot in this range, it can be that shorter output has less chanches to comit a metric error. 
 
@@ -41,6 +41,23 @@ The generated text can be found in the `results` folder.
 
 
 ## 1.1: Perplexity 
+
+1. **What is Perplexity and Why We Use It:**
+
+Perplexity is a metric commonly used in natural language processing to evaluate the performance of language models. It provides a quantitative measure of how well a language model predicts the next word in a sequence of words. Perplexity is especially useful for evaluating the quality of probabilistic language models, such as n-gram models or neural language models like GPT-3.
+
+The main idea behind perplexity is to calculate how surprised the language model is when encountering the actual next word, based on its prediction. A low perplexity score indicates that the model is not surprised very often, meaning it is making accurate predictions and capturing the underlying patterns in the language. On the other hand, a high perplexity score suggests that the model is often surprised by the next word, indicating poor performance.
+
+2. **How to Calculate Perplexity:**
+
+Perplexity is calculated using the cross-entropy loss, which is a common loss function used in language modeling tasks.
+The cross-entropy loss measures the dissimilarity between the predicted probability distribution and the true probability distribution (one-hot encoded vector representing the actual next word). Taking the exponential of the cross-entropy loss yields the perplexity score.
+
+In practice, to calculate perplexity for a language model, we feed the model a sequence of words and calculate the cross-entropy loss for each word prediction. We then sum up these losses and average them over the entire sequence to get the total perplexity score.
+
+3. **Analysis of the Perplexity Results:**
+
+next 
 
 ## 1.1.1: Convergence Study 
 
