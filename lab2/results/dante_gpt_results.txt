@@ -1,0 +1,154 @@
+1) 
+
+output_token = 2000 
+generated text = 
+
+Quei l'aveparte d'una cesto
+  la gretto de la levane
+  qual ch'altre vedette invio e 'l mhino.
+
+Io si pieta` de' ho i pentami riscali,
+  che di loco e a ragiura e di viano,
+  presso in intesere di quest'into venni
+
+questa piu` solitanza cascan punta,
+  e l'altro limagini distram tugia
+  e come le tue cola zioglie gosta,
+
+cotal si veranne con in su o la tremante,
+  tanta o d'Aretro te con di tua vista;
+  mede linaccia e si aggitata.
+
+
+A vissa n'altro fuor ci si` conveduto,
+  da l'altra volte insi eta mi cela,
+  che non Encea sosperia e ann sersa.
+
+Di posse dirto`: <<Cavaresca per non fecerte
+  che ne' se' soffersi e` tanto alci
+  ci puose, e cioserien conviene 'l perto.
+
+Ma se sanza beston li patrere squegi
+  ne la gentra ti rispagine; e avdivio:
+
+che' vedenianzi da la corta;
+  baizza chemosi a elvri` ne' mer monto;
+  cominando mi fe' corne al so chiedi.
+
+Puo` mi si` va testra e cosa certtto attolto
+  che quando lo disperto lui mondo salestri,
+  in qual legno o i' orappersi fammi.
+
+Poi cio` volse cui le che si mondestrare;
+  perche' seder tutterra` si` quella,
+  tempere accorlando tro muta spesse.
+
+E io quasi parolimmeta chi saccoppo
+  l'orsi miei chienorre di nal imezzo,
+  su accordica e ci stua e non vissi.
+
+Or a ner li alledoco e orafanno
+  a li 'l malito e rivorelsi quartuol sentier.
+
+L'accora assai a me fosse di la stesse,
+  e un correbbe, amendo compadese;
+  e 'l suo procero che d'asso favedetto.
+
+Per nostra le monti sembe, e le brasciume;
+  quei radente isseresci e introccea,
+  lo mal vero` cui torno e le cosensere
+
+quand'uno noi pattinser; mi quant'e` le morra,
+  si` come se soavran tassi legaggione?>>.
+
+Cosi` non forme li aveate il mono
+  tanto con leco e l'agorati anche,
+  e mostriente chi in alteggravo stipa,
+  mostrote e la paltare a l'apparea>>.
+
+<<Qual era dolevate scette ste, di quellate
+  riseconte>>, disse quando el mio dosse,
+  <<la` cadar le passi buragia alto bramo,
+
+gia` de la suoni morti e perannore,
+  gir di cotanto lo dispatirion amose
+  al Me
+
+
+2) 
+
+output token = 1000 
+generated text = 
+
+ lingua a la lei van omate lina
+  fu leto su` qui non sob, ai nasmesti.
+
+ne' si` la pedea mi che tanno`
+  perche sien cargen me si fariume;
+  quivo massero piu` nessuno;
+  quest' si disse: <<quale noi anci pio!
+
+Tu si piu` ch'i' veggio perche' eltra sbolcia?
+  ond'io li asprei forendine e partropo,
+  con fa assa un con la terra lo stette
+
+la molta face e i peroppate uno,
+  voi porreer ch'alcui usci` ingogna,
+  in Momedesta ferza morsi ensento,
+
+che' su la` giu` vendi in l'anco fene,
+  rispuolussi e vanno piu` fontice
+  facea a Sreste da me` l'arse in scage.
+
+Come 'l deratto si torre cottosi
+  cio` con lo cor quelle formoro alenz'e` crane
+  che iorsuo` quelle che vivia insepoce` tanto,
+
+si` Martasti copera quel s'imetto,
+  e volto forse e suon scogliosa cresta,
+  cole di setto mando oro e voi con li li antelle.
+
+Poi sarendo s'elltra tuttto l'anga
+  di Malebo, e liei di Locino, e Riasse;
+  e mai tanto, sin se' primai crea?
+
+chi se' nel la sentere mai fede
+  di lettoro` che su` per solper
+
+3) 
+
+output token = 500 
+generated text = 
+
+che mi volse, le mispeme a mosso andette,
+  e colo e intenendo; e a nospiciro,
+  <altri dino il cui biso in etterno>>,
+
+quando facemi che tutta fece altro
+  di Molgeni`, se ti cante il venire ardo,
+  e parlando i con giubido.
+
+Ussi fernumi: paetto sovrente giaccia
+  che lo cui pena per ila` tuolo sarsole>>.
+
+Lo mezza gion la forte corpo - cigno,
+  e disse: <<Quel i milodo perto si vrubia?>>.
+  Li ancorse me due: cantendo li alverte,
+  si` disse 'l domede, e e noi m'accorsi>>.
+
+4) 
+
+output token = 250 
+generated text = 
+
+Poi che subioni la gambatare in sua strazio;
+  e poi corron con tra piu` e combagni.
+
+Medir ch'intrarso da le turbie cito,
+  li occhi piedi e chi tutti quella vedute,
+  aspetto d'aguto il suonor mondo si tante.
+
+MirE che rido`: "Non Ti rispiova?
+  m
+
+
