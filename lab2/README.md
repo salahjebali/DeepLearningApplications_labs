@@ -106,8 +106,6 @@ The following table contains values about the length of *prompt*, *tokens* and a
 | "I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together"       | 287            | 57           | I have a dream that one day every valley shall be engulfed, every hill shall be exalted and every mountain shall be made low, the rough places will be made plains and the crooked places will be made straight and the glory of the Lord shall be revealed and all flesh shall see it together with his glory.
 And he who believes in the Lord shall be exalted, and all flesh shall see the Lord.
 And the Lord has given to his people, in the name of the Lord Jesus Christ, the only begotten Son of God, the only begotten of the Father, and he who believes in the Lord shall be exalted, and all flesh shall see the Lord.   |
-| ...                                         | ...           | ...          | ...                                                        |
-
 
 # Exercise 3.1: Reusing Pre-trained LLMs for Training a Text Classifier
 
