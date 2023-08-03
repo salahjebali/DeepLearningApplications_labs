@@ -137,13 +137,14 @@ Overall, the grammar was good for every prompt, but the coherence with the autho
 Overall, the grammar was good for every prompt, and the coherence with the author was Sufficient, since the lyrics in question are really easy. In this case it seems that the temperature did not change too much, maybe because of the semplicity of the text.
 
 
-2. **Martin Luther King**
+3. **Martin Luther King**
+   
+| Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
+|:-----------:|:--------------:|:--------------------------:|:-------------:|
+|    0.3      |      Good      |        Sufficient          |   Sufficient  |
+|    0.6      |      Good      |        Good                |   Good        |
+|    0.9      |      Good      |        Good                |   Excellent   |
 
-   | Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
-|:------:|:--------------:|:--------------------------:|:-------------:|
-|  0.3  |     Good       |        Sufficient          |    Sufficient  |
-|  0.6  |   Good    |        Good         |   Good       |
-|  0.9   |   Good |        Good            |  Excellent  |
 
 This one really surprised me because I could really feel the difference between the text produced with different temperature. With low temperature, the text was just a repetition, while increasing the temperature the model generated new stuff, that could be easily attributed to the author. Moreover, overall every text was correct under the grammar syntax pov and the semantics was good.
 
