@@ -64,16 +64,130 @@ The results obtained is the following:
 The perplexity value obtained (4.63) on the validation set indicates that the language model has a relatively low level of uncertainty when predicting the next token based on the context provided. Lower perplexity values generally suggest better performance in predicting the next token in a sequence. However, perplexity alone may not capture all aspects of text generation quality, especially in creative tasks like poetry generation.
 Infact, as we have seen in the previous subjective analysis, the **semantic** and **metric** results were really low, and this verify the need of both subjective and objective analysis for nlp tasks, and that poetry generation is a very hard task.
 
-# Exercise 2: 
+# Exercise 3.1: Reusing Pre-trained LLMs for Training a Text Classifier
 
-The convergence of the training and validation curves suggests that the model is effectively learning the underlying patterns present in the MNIST images. The similar trends between the training and validation curves indicate that the model is not suffering from overfitting.
+Peruse the text classification datasets on Hugging Face. Choose a moderately sized dataset and use a LLM to train a classifier to solve the problem.
 
-![Validation adn Test curves](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.1%20MLP/val_train_plot.png)
+Note: A good first baseline for this problem is certainly to use an LLM exclusively as a feature extractor and then train a shallow model.
 
-## 1.1.2: Gradient Flow Study 
+## 3.1.0: Introduction 
 
-The observation that gradients appear to be stable and well-behaved during the training of your MLP for image classification on MNIST is a positive sign of effective learning and optimization.
+In this exercise, I trained four classifiers, namely Multi-Layer Perceptron (MLP), Logistic Regression, Support Vector Machine (SVM), and Random Forest, using the features extracted by the [DistilBERT](https://huggingface.co/docs/transformers/model_doc/distilbert) model on the [IMDb dataset](https://huggingface.co/datasets/imdb).
+The models have been all taken from [scikit-learn](https://scikit-learn.org/stable/) since the goal of this study was not about the architecture of the classifer, rathen to test if a pretrained LLM could be used as a feature extractor to train other classifiers. 
 
-![Gradient Flow](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.1%20MLP/gradient_flow.png)
+For this reason, I repeated 2 different experiments varying the value of **max tokens** the pretrained tokenizer has: 128 and 256.
+After the experiments I found interesting results in how this hyperparameter can influence the performance of the classifiers. 
 
-# Exercise 3.1: 
+Before jumping in the results analysis I will give a breef structure of the exercise: 
+
+1. Dataset:
+The IMDb dataset contains movie reviews labeled as either positive or negative sentiments. It serves as a standard benchmark for sentiment analysis and binary text classification tasks. We divide the dataset into training and test sets, each containing a balanced distribution of positive and negative reviews.
+
+2. Feature Extraction:
+To extract meaningful features from the text data, we utilize the DistilBERT model pretrained on large-scale text corpora. The tokenizer from Hugging Face allows us to convert raw text into tokenized sequences suitable for input to DistilBERT. The model's last hidden state is used as the feature representation for each text document.
+
+3. Classifier Selection:
+We select three popular classifiers from scikit-learn:MLPClassifier, Support Vector Machine (SVM), Logistic Regression, and Random Forest. Each model has its unique characteristics, making them suitable for different types of text classification tasks.
+
+4. Model Training:
+We train each classifier on the features extracted by DistilBERT from the IMDb training set. We fine-tune the hyperparameters using cross-validation to optimize the model's performance.
+
+5. Evaluation Metrics:
+To assess the performance of our classifiers, we evaluate them on the IMDb test set. We use various evaluation metrics, such as accuracy, precision, recall, F1-score, and confusion matrices, to gain insights into the models' behavior and identify potential areas for improvement.
+
+
+## 3.1: Results Analysis 
+
+I run the experiment with 4 different classifiers using 2 different values for **max_tokens** in the tokenizer. I obtained very different results changing this hyperparameters, and for studying the results I used different metrics such as accuracy, recall, F1-score and support. 
+
+The goal of this experiment were: 
+
+1. To evaluate if a classifier could reach decent performance upon training on features extracted by a different model pre trained on a different dataset;
+2. To estabilish the best classifier;
+3. To study if the performance of the classifier could be influence by the choiche of hyperparameter of the feature extractor (spoiler: yes).
+
+First, I will display the report for both the values of max_tokens, then I will highlight the main difference and train to give an evaluation of the results.
+
+### 3.1.0: Max tokens = 128
+
+**MLPClassifier Report** 
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.44      | 1.00    | 0.61     | 7       |
+| Class 1    | 0.00      | 0.00    | 0.00     | 9       |
+| Accuracy   |           |         | 0.44     | 16      |
+| Macro Avg  | 0.22      | 0.50    | 0.30     | 16      |
+| Weighted Avg | 0.19    | 0.44    | 0.27     | 16      |
+
+**Logistic Regression Classification Report**
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.50      | 1.00    | 0.67     | 7       |
+| Class 1    | 1.00      | 0.22    | 0.36     | 9       |
+| Accuracy   |           |         | 0.56     | 16      |
+| Macro Avg  | 0.75      | 0.61    | 0.52     | 16      |
+| Weighted Avg | 0.78    | 0.56    | 0.50     | 16      |
+
+**SVM Classification Report** 
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.50      | 1.00    | 0.67     | 7       |
+| Class 1    | 1.00      | 0.22    | 0.36     | 9       |
+| Accuracy   |           |         | 0.56     | 16      |
+| Macro Avg  | 0.75      | 0.61    | 0.52     | 16      |
+| Weighted Avg | 0.78    | 0.56    | 0.50     | 16      |
+
+**Random Forest Classification Report**
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.54      | 1.00    | 0.70     | 7       |
+| Class 1    | 1.00      | 0.33    | 0.50     | 9       |
+| Accuracy   |           |         | 0.62     | 16      |
+| Macro Avg  | 0.77      | 0.67    | 0.60     | 16      |
+| Weighted Avg | 0.80    | 0.62    | 0.59     | 16      |
+
+
+
+### 3.1.1: Max tokens = 256
+
+**MLPClassifier Report** 
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.75      | 0.43    | 0.55     | 7       |
+| Class 1    | 0.67      | 0.89    | 0.76     | 9       |
+| Accuracy   |           |         | 0.69     | 16      |
+| Macro Avg  | 0.71      | 0.66    | 0.65     | 16      |
+| Weighted Avg | 0.70    | 0.69    | 0.67     | 16      |
+
+**Logistic Regression Classification Report**
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.47      | 1.00    | 0.64     | 7       |
+| Class 1    | 1.00      | 0.11    | 0.20     | 9       |
+| Accuracy   |           |         | 0.50     | 16      |
+| Macro Avg  | 0.73      | 0.56    | 0.42     | 16      |
+| Weighted Avg | 0.77    | 0.50    | 0.39     | 16      |
+
+**SVM Classification Report** 
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.43      | 0.86    | 0.57     | 7       |
+| Class 1    | 0.50      | 0.11    | 0.18     | 9       |
+| Accuracy   |           |         | 0.44     | 16      |
+| Macro Avg  | 0.46      | 0.48    | 0.38     | 16      |
+| Weighted Avg | 0.47    | 0.44    | 0.35     | 16      |
+
+**Random Forest Classification Report**
+|            | Precision | Recall  | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| Class 0    | 0.44      | 1.00    | 0.61     | 7       |
+| Class 1    | 0.00      | 0.00    | 0.00     | 9       |
+| Accuracy   |           |         | 0.44     | 16      |
+| Macro Avg  | 0.22      | 0.50    | 0.30     | 16      |
+| Weighted Avg | 0.19    | 0.44    | 0.27     | 16      |
+
+
+
+
+
+
