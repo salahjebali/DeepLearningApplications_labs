@@ -1,6 +1,6 @@
 This is the analysis of the experiments conducted. 
 
-The  `notebook `, for reproducibility, can be found [here](https://colab.research.google.com/drive/169A6w8POVtu0sX4nuURDyp5-mFT_zJZL?authuser=1#scrollTo=vB_KmNNENCWA) as well.
+The  `notebook `, for reproducibility, can be found [here](https://colab.research.google.com/drive/1zlmrgITro4bjO0U_24_UUnvz0DZQ7IHJ?usp=sharing) as well.
 
 # Exercise 1: GPT applied to Dante Alighieri's Divina Commedia
 
@@ -63,6 +63,37 @@ The results obtained is the following:
 
 The perplexity value obtained (4.63) on the validation set indicates that the language model has a relatively low level of uncertainty when predicting the next token based on the context provided. Lower perplexity values generally suggest better performance in predicting the next token in a sequence. However, perplexity alone may not capture all aspects of text generation quality, especially in creative tasks like poetry generation.
 Infact, as we have seen in the previous subjective analysis, the **semantic** and **metric** results were really low, and this verify the need of both subjective and objective analysis for nlp tasks, and that poetry generation is a very hard task.
+
+# Exercise 2: Working with Real LLMs
+
+The key classes that you will work with are GPT2Tokenizer to encode text into sub-word tokens, and the GPT2LMHeadModel. Note the LMHead part of the class name -- this is the version of the GPT2 architecture that has the text prediction heads attached to the final hidden layer representations (i.e. what we need to generate text).
+
+Instantiate the GPT2Tokenizer and experiment with encoding text into integer tokens. Compare the length of input with the encoded sequence length.
+
+Tip: Pass the return_tensors='pt' argument to the togenizer to get Pytorch tensors as output (instead of lists).
+
+## 2.1.0: Introduction 
+
+In this experiment, I employed GPT-2 model, obtained from Hugging Face's pre-trained models, as our text generator. The primary goal was to conduct a qualitative evaluation to assess the model's performance in generating text that exhibits coherence, grammatical correctness, and semantic fidelity to the given prompts. I used three diverse English prompts to test the model's capabilities and variations of temperature were employed to explore the impact on the generated outputs.
+
+1. **Selected Prompts**:
+
+A sentence from "La Divina Commedia" by Dante Alighieri, a masterpiece of classic literature.
+A line from the lyrics of The Weeknd, a renowned Canadian singer, representing contemporary language usage.
+An excerpt from a speech delivered by Martin Luther King, representing historical and impactful prose.
+
+2. **Temperature Variation**:
+To understand how the temperature parameter influences text generation, we conducted the experiments for each prompt three times, using different temperature settings: 0.3, 0.6, and 0.9. The temperature parameter controls the randomness of the generated text. Lower values like 0.3 produce more focused and deterministic outputs, while higher values like 0.9 introduce greater diversity and creativity.
+
+3. **Mode do_sample = True**:
+During the experiments, we used the setting do_sample = True, as we observed that when do_sample was set to False, the model repetitively generated the same sentence. By enabling do_sample, we allowed the model to explore more possibilities and produce diverse outputs.
+
+4. **Evaluation Criteria**:
+The evaluation of the generated text was performed based on three key criteria:
+
+   1. Grammar: We assessed the correctness of grammar in the generated sentences to ensure they were structurally accurate and well-formed.
+   2. Coherence with the Author: Our aim was to examine if the generated text remained coherent with the style and language typically used by the original authors (Dante Alighieri, The Weeknd, and Martin Luther King).
+   3. Semantics: We evaluated whether the generated text retained the intended meaning of the original prompts and whether it conveyed meaningful information.
 
 # Exercise 3.1: Reusing Pre-trained LLMs for Training a Text Classifier
 
