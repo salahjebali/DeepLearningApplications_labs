@@ -117,21 +117,22 @@ For each author of the prompt we used a different tokenizer but the same model, 
 
 1. **Dante Alighieri**
 
-   | Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
-|:------:|:--------------:|:--------------------------:|:-------------:|
-|  0.3  |     Good       |        Insufficient          |    Sufficient  |
-|  0.6  |   Good    |        Insufficient          |   Sufficient        |
-|  0.9   |   Good |        Insufficient               |  Good  |
+
+| Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
+|:-----------:|:--------------:|:--------------------------:|:-------------:|
+|    0.3      |      Good      |        Insufficient        |   Sufficient  |
+|    0.6      |      Good      |        Insufficient        |   Sufficient  |
+|    0.9      |      Good      |        Insufficient        |      Good     |
 
 Overall, the grammar was good for every prompt, but the coherence with the author was insufficient: I could not understand that the author was Dante Alighieri by just reading the generated text. I was suprised by the *fantasy* with high temperature and the semantic level. 
 
 2. **The Weeknd**
 
-   | Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
-|:------:|:--------------:|:--------------------------:|:-------------:|
-|  0.3  |     Good       |        Sufficient          |    Sufficient  |
-|  0.6  |   Good    |        Sufficient          |   Sufficient        |
-|  0.9   |   Good |        Sufficient               |  Good  |
+| Temperature | Grammar Syntax | Coherence with Author Style | Text Semantics |
+|:-----------:|:--------------:|:--------------------------:|:-------------:|
+|    0.3      |      Good      |        Sufficient          |   Sufficient  |
+|    0.6      |      Good      |        Sufficient          |   Sufficient  |
+|    0.9      |      Good      |        Sufficient          |      Good     |
 
 Overall, the grammar was good for every prompt, and the coherence with the author was Sufficient, since the lyrics in question are really easy. In this case it seems that the temperature did not change too much, maybe because of the semplicity of the text.
 
