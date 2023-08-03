@@ -57,9 +57,14 @@ In practice, to calculate perplexity for a language model, we feed the model a s
 
 3. **Analysis of the Perplexity Results:**
 
-next 
+The results obtained is the following: 
 
-## 1.1.1: Convergence Study 
+**Perplexity on Validation Set: 4.63** 
+
+The perplexity value obtained (4.63) on the validation set indicates that the language model has a relatively low level of uncertainty when predicting the next token based on the context provided. Lower perplexity values generally suggest better performance in predicting the next token in a sequence. However, perplexity alone may not capture all aspects of text generation quality, especially in creative tasks like poetry generation.
+Infact, as we have seen in the previous subjective analysis, the **semantic** and **metric** results were really low, and this verify the need of both subjective and objective analysis for nlp tasks, and that poetry generation is a very hard task.
+
+# Exercise 2: 
 
 The convergence of the training and validation curves suggests that the model is effectively learning the underlying patterns present in the MNIST images. The similar trends between the training and validation curves indicate that the model is not suffering from overfitting.
 
@@ -71,4 +76,4 @@ The observation that gradients appear to be stable and well-behaved during the t
 
 ![Gradient Flow](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab1/results/1.1%20MLP/gradient_flow.png)
 
-# Exercise 1.2: Rinse and Repeat
+# Exercise 3.1: 
