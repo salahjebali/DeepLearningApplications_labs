@@ -1,0 +1,17 @@
+Clean Data Accuracy: 0.5472
+Adversarial Data Accuracy: 0.3707
+OOD Detection Accuracy: 1.0016
+
+------------------
+
+Clean Data Accuracy: 0.5472, Precision: 0.5615, Recall: 0.5472, F1-Score: 0.5357
+Adversarial Data Accuracy: 0.3707, Precision: 0.3849, Recall: 0.3707, F1-Score: 0.3595
+
+---------------
+
+OOD Entropy:
+Sample 1: 1.9698
+Sample 2: 1.9435
+Sample 3: 1.9905
+Sample 4: 1.9554
+Sample 5: 1.9798
