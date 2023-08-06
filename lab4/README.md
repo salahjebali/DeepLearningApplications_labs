@@ -75,4 +75,47 @@ Now I will provie a quantitative evaluation. Recall that the model accuracy befo
 
 The trend drops exponentially, and eventually stabilize. The quantitative results confirm the qualitative results we have seen previously.
 
-# Exercise 2.2: 
+# Exercise 2.2: Augment training with adversarial examples
+
+Use your implementation of FGSM to augment your training dataset with adversarial samples. Ideally, you should implement this data augmentation on the fly so that the adversarial samples are always generated using the current model. Evaluate whether the model is more (or less) robust to ID samples using your OOD detection pipeline and metrics you implemented in Exercise 1.
+
+The trained model with samples augmented with FGSM will be called **robust model**
+
+## Exercise 2.2.1: Quantitative Evaluation 
+
+I wanted to perform a quantiative evaluation comparing the **robust model** with the **standard model** over the attacked samples, varying the values of epsilon. 
+
+![comparison ](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_fgsm_qe.png)
+
+The blue line is the standard model accuracy calculated on the samples that received a fgsm attack and it has the same trend as before, of course. 
+The orange one is the other trained on fgsm attacked samples, and as we can notice, it is much more robust than the standard one. 
+This shows the importance of training a model on attacked samples. 
+Moreover, the model was trained with an epsilon = 0.1, but still it is robust with respect to bigger values of epsilon, while the blue one drop exponentially with greater values of epsilon.
+
+## Exercise 2.2.2: OOD Detection Pipeline
+
+Let's use the previous ood-pipeline to evaluate the **robust_model**
+
+### Exercise 2.2.2.1: OOD detection with logits 
+
+![ood](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_fgsm_ood.png)
+
+Even if the model was trained on attacked sample, unfortunately, it does not show a very distintive difference with OOD samples. That, again, means that the max-logits is not a good way for OOD-detection.
+
+### Exercise 2.2.2.2: ROC and AUC metrics
+
+Let's try to use more advanced techniques, like in the previous exercise, with Area Under the Curve of ROC and the Precision-Recall curve
+
+![auc](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_fgsm_auc.png)
+
+The achieved AUC of 0.65 indicates a slight improvement respect the previous model. It indicates that the Out-of-Distribution (OOD) detection system is capable of distinguishing between in-distribution and out-of-distribution samples with moderate effectiveness. An AUC value closer to 1 would indicate a stronger discriminative ability. Although the current AUC suggests some level of differentiation, there is room for improvement to enhance the system's performance.
+
+### Exercise 2.2.2.3: Precision Recall curve metrics
+
+![pr](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_fgsm_pr.png)
+
+The computed AP of 0.90 show a slight improvement with respect to the previous model, not so impressive. We have to admit that it was already high with the standard model. Overral, this result implies that the OOD detection system is effective in ranking the relevance of detected out-of-distribution samples during the precision-recall analysis. An AP value closer to 1 signifies better precision and recall balance. The high AP value indicates the system's ability to achieve both high precision (low false positive rate) and high recall (low false negative rate).
+
+# Exercise 3.3: 
+
+
