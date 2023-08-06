@@ -116,6 +116,51 @@ The achieved AUC of 0.65 indicates a slight improvement respect the previous mod
 
 The computed AP of 0.90 show a slight improvement with respect to the previous model, not so impressive. We have to admit that it was already high with the standard model. Overral, this result implies that the OOD detection system is effective in ranking the relevance of detected out-of-distribution samples during the precision-recall analysis. An AP value closer to 1 signifies better precision and recall balance. The high AP value indicates the system's ability to achieve both high precision (low false positive rate) and high recall (low false negative rate).
 
-# Exercise 3.3: 
+# Exercise 3.3: Experiment with *targeted* adversarial attacks
 
+In this section I have implement the Fast Gradient Sign Method for generating targeted attacks, in order for the samples to imitate samples from a specific class.
 
+I then evaluated the adversarial samples quantiatively, comparing the standard model with the robust model previously trained on the general fgsm. For doing it I have plotted the accuracy over the targeted attacked samples in function of the value of epsilon.
+
+Then, I evaluated the adversarial samples qualitatively with 3 plots:
+
+1. Plot of clean images with predictions of standard model.
+2. Plot of perturbed images with predictions of standard model.
+3. Plot of perturbed images with predictions of robust model.
+
+All the experiments have been conducted using as target class **horse** of CIFAR-10, but you can repeat it changing the target with what you prefer.
+Epsilon = 0.1.
+
+## Exercise 3.3.1: Quantiative Evaluation 
+
+![qe](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex3_standard_vs_robust_accuracy.png)
+
+The graph shows once again that the **robust model** is actually more robust with respect to the perturbations. 
+Infact, it didn't lose much accuracy, and the trend seems to be *linear* with the value of epsilon. 
+The **standard model** instead, showed a strange path, growin in accuracy (still under the 60% on normal set), from 30% and then startin descending again.
+
+## Exercise 3.3.2: Qualitative Evaluation 
+
+In this section I wanted to evaluate adversarial samples qualitatively with 3 plots:
+
+1. Plot of clean images with predictions of standard model.
+2. Plot of perturbed images with predictions of standard model.
+3. Plot of perturbed images with predictions of robust model.
+
+**Plot of clean images with predictions of standard model**
+
+![plot](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_3_plot_img_1.png)
+
+We can see that the predictions are pretty accurate (remember that his model has a 60% test accuracy), as we expected.
+
+**Plot of perturbed images with predictions of standard model**
+
+![plot](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_3_plot_img_2.png)
+
+In this case the model starts to be very wrong and misclassifies the majority of images, as expected. 
+
+**Plot of perturbed images with predictions of robust model**
+
+![plot](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_3_plot_img_3.png)
+
+Even the robust_model is innacurate, but still much more accurate wrt the standard model on the perturbed images. This thanks to the adversarial training. 
