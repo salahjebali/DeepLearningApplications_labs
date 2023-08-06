@@ -4,7 +4,7 @@ This repository contains the source code for the three laboratories assignments 
 ## Table of contents
 * [Lab 1: Convolutional Neural Networks](#cnn)
 * [Lab 2: Large Language Models](#llm)
-* [Lab 3: Adversarial Learning](#advl)
+* [Lab 4: Adversarial Learning](#advl)
 
 ## Lab 1: Convolutional Neural Networks
 
