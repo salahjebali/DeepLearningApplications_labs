@@ -34,4 +34,45 @@ The computed AP of 0.89 implies that the OOD detection system is effective in ra
 An AP value closer to 1 signifies better precision and recall balance. 
 The high AP value indicates the system's ability to achieve both high precision (low false positive rate) and high recall (low false negative rate).
 
-# Exercise 2: Enhancing Robustness to Adversarial Attack
+# Exercise 2.1: Enhancing Robustness to Adversarial Attack
+
+In thi exercise I am implementing Fast Gradient Sign Method (FGSM) method to generate some attacks to the samples. 
+Recal that the FGSM perturbs samples in the direction of the gradient with respect to the input x. 
+
+In this exercise I am performing a qualitative and a quantitative evaluation of the performance of the previous model (standard model). 
+
+Before starting, recall that the **test accuracy = 60%** of the standard model.
+
+## Exercise 2.1.1: Qualitative Evaluation 
+
+In this section I will perform a qualitative evaluation of the FGSM attacked samples, with 3 different values of epsilon: 0.01, 0.1, 03. 
+
+We will see in the quantitative evaluation, that just a value of 0.02 is already enough to ruin the image at the point which the accuracy drop from 60% to about 20%.
+
+**Before Attack** 
+
+![before attack](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_before_attack.png)
+
+**Epsilon = 0.01**
+
+![fgsm_1](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_after_attack_1.png)
+
+**Epsilon = 0.1**
+
+![fgsm_2](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_after_attack_2.png)
+
+**Epsilon = 0.3**
+
+![fgsm_3](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_after_attack_3.png)
+
+These results suggest that the attack is effective! And as the quantitative resuls will show, the quality drops exponentially. Indeed, from 0.1 to 0.3 the image is almost unrecognizible.
+
+## Exercise 2.1.2: Quantitative Evaluation
+
+Now I will provie a quantitative evaluation. Recall that the model accuracy before the attack was about 60%, we can see that with just an epsilon of 0.01 the accuracy dramatically drops to 30%, and as we espect, the more we grow and the worse it becomes.
+
+![accuracy after attack](https://github.com/salahjebali/DeepLearningApplications_labs/blob/main/lab4/results/ex_2_qe.png)
+
+The trend drops exponentially, and eventually stabilize. The quantitative results confirm the qualitative results we have seen previously.
+
+# Exercise 2.2: 
